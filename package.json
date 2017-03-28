@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-      "start": "node ."
+    "start": "node ."
+  },
+  "dependencies": {
+    "color": "^1.0.3"
   }
 }
