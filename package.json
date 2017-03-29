@@ -9,7 +9,7 @@
   "scripts": {
     "start": "yarn dev:start",
     "dev:start": "nodemon --ignore lib --exec babel-node src/server",
-    "dev:wds": "webpack-dev-server --progress",
+    "dev:wds": "webpack-dev-server --progress --host 0.0.0.0",
     "prod:build": "rimraf lib && babel src -d lib --ignore .test.js && cross-env NODE_ENV=production webpack -p --progress",
     "prod:start": "cross-env NODE_ENV=production pm2 start lib/server && pm2 logs",
     "prod:stop": "pm2 delete server",
@@ -23,7 +23,8 @@
     "compression": "^1.6.2",
     "express": "^4.15.2",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-hot-loader": "next"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
